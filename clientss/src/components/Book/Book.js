@@ -9,8 +9,9 @@ const Book = (props) => {
     await axios
       .delete(`https://bookstore-mi.herokuapp.com/books/${_id}`)
       .then((res) => res.data)
-      .then(() => history("/books"))
+      .then(() => history("/"))
       .then(() => history("/books"));
+      alert("Book Deleted")
   };
 
   return (
