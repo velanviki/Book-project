@@ -24,10 +24,10 @@ function App() {
           <Route path="/login" exact element={<Login />} />
           <Route path="/" element={<Navigate replace to="/login" />} />
 
-          <Route path="/add" element={user ? <AddBook /> : <Register />} />
+          <Route path="/add" element={user ? <AddBook /> : <Signup />} />
           <Route
             path="/books"
-            element={user ? <Books /> : <Register />}
+            element={user ? <Books /> : <Signup />}
             
           />
           {/* <Route path="/about" element={user?<About />:<Register/>} exact /> */}
