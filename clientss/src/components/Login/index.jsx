@@ -17,7 +17,8 @@ const Login = () => {
 			const url = "https://bookstore-mi.herokuapp.com/api/auth";
 			const { data: res } = await axios.post(url, data);
 			localStorage.setItem("token", res.data);
-			window.location = "/home";
+			// window.location = "/home";
+			navigate("/home");
 		} catch (error) {
 			if (
 				error.response &&
