@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { Link,useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 
 const Login = () => {
@@ -11,7 +11,7 @@ const Login = () => {
 		setData({ ...data, [input.name]: input.value });
 	};
 
-	const navigate = useNavigate();
+	
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -19,8 +19,8 @@ const Login = () => {
 			const url = "https://bookstore-mi.herokuapp.com/api/auth";
 			const { data: res } = await axios.post(url, data);
 			localStorage.setItem("token", res.data);
-			// window.location = "/home";
-			navigate("/home");
+			window.location = "/home";
+			
 		} catch (error) {
 			if (
 				error.response &&
