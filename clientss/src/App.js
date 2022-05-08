@@ -19,7 +19,7 @@ function App() {
       </header>
       <main>
         <Routes>
-          {user && <Route path="/home" exact element={<Books/>} />}
+          {user && <Route path="/books" exact element={<Books/>} />}
           <Route path="/signup" exact element={<Signup />} />
           <Route path="/login" exact element={<Login />} />
           <Route path="/" element={<Navigate replace to="/login" />} />
